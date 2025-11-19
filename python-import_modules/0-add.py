@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 #a program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3
 
-def add(a, b):
-    addition=print(a+b)
-    return addition
-add(1, 2)
+from add_0.py from add
+a=1
+b=2
+print("{}+{}+{}".format(a,b,add(a,b)))
+
