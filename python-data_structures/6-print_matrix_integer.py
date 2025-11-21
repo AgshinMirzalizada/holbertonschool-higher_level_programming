@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
 def print_matrix_integer(matrix=[[]]):
-    for row in matrix:
-        for element in range(len(row)):
-            if element != 0:
+    for i in matrix:
+        for j in range(len(i)):
+            if j != 0:
                 print(" ", end="")
-            print("{:d}".format(row[element]), end="")
+            print("{:d}".format(i[j]), end="")
         print()
