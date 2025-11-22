@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     if len(tuple_a) < 2:
         first_el_a = tuple_a[0]
@@ -22,5 +22,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
     last_tuple_2 = second_el_a + second_el_b
     last_tuple = (last_tuple_1, last_tuple_2)
     return last_tuple
-if __name__ == "__main__":
-    print(add_tuple((5,), (10, 20, 30)))
