@@ -1,24 +1,8 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    if len(tuple_a) < 2:
-        first_el_a = tuple_a[0]
-        second_el_a = 0
-    elif len(tuple_a) > 2:
-        first_el_a = tuple_a[0]
-        second_el_a = tuple_a[1]
-    else:
-        first_el_a = tuple_a[0]
-        second_el_a = tuple_a[1]
-    if len(tuple_b) < 2:
-        first_el_b = tuple_b[0]
-        second_el_b = 0
-    elif len(tuple_b) > 2:
-        first_el_b = tuple_b[0]
-        second_el_b = tuple_b[1]
-    else:
-        first_el_b = tuple_b[0]
-        second_el_b = tuple_b[1]
-    last_tuple_1 = first_el_a + first_el_b
-    last_tuple_2 = second_el_a + second_el_b
-    last_tuple = (last_tuple_1, last_tuple_2)
-    return last_tuple
+    a1 = tuple_a[0] if len(tuple_a) > 0 else 0
+    a2 = tuple_a[1] if len(tuple_a) > 1 else 0
+    b1 = tuple_b[0] if len(tuple_b) > 0 else 0
+    b2 = tuple_b[1] if len(tuple_b) > 1 else 0
+
+    return (a1 + b1, a2 + b2)
