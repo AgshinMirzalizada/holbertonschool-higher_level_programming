@@ -8,6 +8,7 @@ class Rectangle:
     """Represents a rectangle with width and height."""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance."""
@@ -65,7 +66,7 @@ class Rectangle:
             return ""
         lines = []
         for _ in range(self.height):
-            lines.append("#" * self.width)
+            lines.append(str(self.print_symbol) * self.width)
         return "\n".join(lines)
 
     def __repr__(self):
