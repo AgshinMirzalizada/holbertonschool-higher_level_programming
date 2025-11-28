@@ -13,6 +13,6 @@ class Student:
 
     def to_json(self, attrs=None):
         """Return dictionary of instance attributes filter by attrs if given"""
-        if isinstance(list, attrs):
+        if isinstance(attrs, list):
             return {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__.copy()
