@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a Student class with JSON serialization and deserialization."""
 
+
 class Student:
     """Student class with first_name, last_name, and age attributes."""
 
@@ -11,7 +12,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Return a dictionary of instance attributes; filter by attrs if given."""
+        """Return dictionary of instance attributes filter by attrs if given"""
         if isinstance(attrs, list):
             return {k: v for k, v in self.__dict__.items() if k in attrs}
         return self.__dict__.copy()
