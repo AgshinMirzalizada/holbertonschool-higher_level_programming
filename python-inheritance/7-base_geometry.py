@@ -1,31 +1,17 @@
 #!/usr/bin/python3
-"""Module defining BaseGeometry and Rectangle classes."""
+"""this is document"""
+
 
 class BaseGeometry:
-    """BaseGeometry class."""
+    """this is document"""
 
     def area(self):
-        """Raises Exception because not implemented."""
         raise Exception("area() is not implemented")
+    """this is document"""
 
     def integer_validator(self, name, value):
-        """Validate that value is a positive integer."""
         if type(value) is not int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
-
-
-class Rectangle(BaseGeometry):
-    """Rectangle class inheriting from BaseGeometry."""
-
-    def __init__(self, width, height):
-        """Initialize rectangle with validated width and height."""
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        """Return area of the rectangle."""
-        return self.__width * self.__height
+            raise TypeError("{} must be an integer".format(name))
+        elif value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
+        self.name = value
