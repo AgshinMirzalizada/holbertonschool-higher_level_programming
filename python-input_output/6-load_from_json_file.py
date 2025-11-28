@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Module for saving Python objects to JSON files.
+Module for creating Python objects from JSON files.
 """
 
 import json
 
 
-def save_to_json_file(my_obj, filename):
-    """Write a Python object to a file in JSON format."""
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(my_obj, f)
+def load_from_json_file(filename):
+    """Return the Python object represented by a JSON file."""
+    with open(filename, "r", encoding="utf-8") as f:
+        return json.load(f)
