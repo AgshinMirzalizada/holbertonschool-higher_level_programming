@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""
-Sends request to the given URL and prints value of the 'X-Request-Id' header.
-"""
+"""jbndfinbdfmnbd"""
 
 import urllib.request
 import sys
+
+
 if __name__ == "__main__":
-    url = sys.argv[1]
-    req = urllib.request.Request(url)
-    with urllib.request.urlopen(req) as response:
-        print(response.headers.get("X-Request-Id"))
+    url = urllib.request.Request(sys.argv[1])
+    with urllib.request.urlopen(url) as response:
+        headers = response.info()
+        result = headers.get('X-Request-Id')
+        print(result)

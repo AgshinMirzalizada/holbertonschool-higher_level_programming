@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""
-Fetches data from https://intranet.hbtn.io/status using the urllib package
-and displays the response body in a specific format.
-"""
+"""kvndfobioefngbf"""
+
 import urllib.request
 
-with urllib.request.urlopen("https://intranet.hbtn.io/status") as request:
-    content = request.read()
 
-    print("Body response:")
-    print(f"\t- type: {type(content)}")
-    print(f"\t- content: {content}")
-    print(f"\t- utf8 content: {content.decode('utf-8')}")
+if __name__ == "__main__":
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+        body = response.read()
+print("Body response:")
+print(f"\t- type: {type(body)}")
+print(f"\t- content: {body}")
+print(f"\t- utf8 content: {body.decode('utf-8')}")
